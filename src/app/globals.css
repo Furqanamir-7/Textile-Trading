@@ -1,26 +1,101 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary: #f36a3d;
+  --color-secondary: #ff8c5a;
+  --color-accent: #ffb088;
+
+  --color-bg: #0a0a0a;
+  --color-surface: #141414;
+  --color-dark: #050505;
+  --color-dark-muted: #111111;
+
+  --color-heading: #f5f5f5;
+  --color-text: #c4c4c4;
+  --color-text-muted: #737373;
+  --color-text-light: #525252;
+
+  --radius-card: 28px;
+  --radius-pill: 999px;
+  --radius-sm: 12px;
+
+  --shadow-card: 0 4px 32px rgba(0, 0, 0, 0.4);
+  --shadow-card-hover: 0 12px 48px rgba(243, 106, 61, 0.2);
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.5);
+
+  --glass-bg: rgba(20, 20, 20, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-blur: 16px;
+
+  --font-display: var(--font-plus-jakarta);
+  --font-body: var(--font-dm-sans);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+  --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-dark: var(--color-dark);
+  --color-dark-muted: var(--color-dark-muted);
+  --color-heading: var(--color-heading);
+  --color-muted: var(--color-text-muted);
+  --color-text: var(--color-text);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --radius-card: var(--radius-card);
+  --radius-pill: var(--radius-pill);
+  --radius-sm: var(--radius-sm);
+  --shadow-card: var(--shadow-card);
+  --shadow-card-hover: var(--shadow-card-hover);
+  --shadow-glass: var(--shadow-glass);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(20px, -20px);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body), sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display), sans-serif;
+  color: var(--color-heading);
+}
+
+a,
+button,
+[role="button"],
+input,
+select,
+textarea,
+label {
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  cursor: text;
 }
