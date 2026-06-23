@@ -32,8 +32,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${displayFont.variable} ${bodyFont.variable} h-full`}>
-      <body className="min-h-full antialiased">
+    <html lang="en" className={`${displayFont.variable} ${bodyFont.variable}`}>
+      <body className="min-h-screen antialiased">
         <SmoothScrollProvider>
           <Navbar />
           <PageTransition>

@@ -75,6 +75,8 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body), sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 h1,
